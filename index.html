@@ -5,26 +5,86 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1">
     <style>
+    * {
+        box-sizing: border-box;
+    }
+
     html,
     body {
         height: 100%;
+        cursor: default;
     }
 
     body {
         margin: 0;
         display: flex;
-        background: pink;
+        background: #fff;
+        font: 16px monospace;
+        padding: 1rem;
+        min-width: 320px;
     }
 
     img {
         border: 4px solid blue;
+        max-width: 100%;
+        box-shadow: .5rem .5rem 0 #000;
+    }
+
+    .container {
         margin: auto;
-        max-width: 80%;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .links {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 2rem 0 0;
+    }
+
+    .links > * {
+        margin: .5rem 0;
+    }
+
+    @media (max-width: 800px) {
+        .links {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .btn {
+        padding: .85rem 1rem;
+        border: 4px solid blue;
+        display: inline-block;
+        background: #fff;
+        box-shadow: .5rem .5rem 0 #000;
+        text-transform: uppercase;
+        color: blue;
+        white-space: nowrap;
+        text-decoration: none;
+        margin-bottom: 1rem;
+    }
+
+    .btn:hover,
+    .btn:focus {
+        box-shadow: none;
     }
     </style>
 </head>
 <body>
-    <img src="giphy.gif"
-         alt="GIF That ain't how money works!">
+    <div class="container">
+        <img src="giphy.gif"
+             alt="GIF That ain't how money works!">
+        <div class="links">
+            <a href="https://hotgirlsguidetocrypto.com"
+               class="btn">Click HERE</a>
+            <span>
+                help i have adhd
+            </span>
+            <a href="https://twitter.com/shengslogar">@ShengSlogar</a>
+        </div>
+    </div>
 </body>
 </html>
